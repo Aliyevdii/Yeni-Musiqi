@@ -5,7 +5,7 @@ from config import BOT_USARNAME, BOT_NAME as bot
 from helpers.filters import command, other_filters2
 #
 
-@Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
+@Client.on_message(command(["start", f"start@{BOT_USARNAME}"]))
 async def start(_, message: Message):
     await message.reply_photo("https://i.ibb.co/MpdcXYM/IMG-20211023-135851-221.jpg")
     await message.reply_text(
