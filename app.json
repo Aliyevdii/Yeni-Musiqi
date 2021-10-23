@@ -15,7 +15,12 @@
     },
     "BOT_NAME": {
       "description": "MusicPlayer Bot Adınız.",
-      "required": false,
+      "required": true,
+      "value": ""
+    },
+    "BOT_USARNAME": {
+      "description": "MusicPlayer Bot Kullanıcı Adınız.",
+      "required": true,
       "value": ""
     },
     "API_ID": {
