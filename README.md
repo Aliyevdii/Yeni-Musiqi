@@ -35,7 +35,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BirBeyfendi/BeyfendiMusicVaves-1)
 
 ## Demiryolu Dağıtımı 🚄
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FBirBeyfendi%2FEfsaneMusicVaves-1&plugins=postgresql&envs=SESSION_NAME%2CBOT_TOKEN%2CAPI_ID%2CAPI_HASH%2CSUDO_USERS%2CDURATION_LIMIT&SESSION_NAMEDesc=Pyrogram+oturum+dizesi.&BOT_TOKENDesc=%40BotFather+dan+ald%C4%B1%C4%9F%C4%B1n%C4%B1z+tokeni+yaz%C4%B1n.&API_IDDesc=my.telegram.org+den+al%C4%B1nan+kodu+yaz%C4%B1n.&API_HASHDesc=my.telegram.org+den+al%C4%B1nan+hash+kodunu+yaz%C4%B1n.&SUDO_USERSDesc=Kullan%C4%B1c%C4%B1+id+sini+Rose+den+id+yaz%C4%B1p+al%C4%B1n.&DURATION_LIMITDesc=En+fazla+60+veya+45+yaz%C4%B1n%C4%B1z.)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FBirBeyfendi%2FBeyefendiMusicVaves-1&plugins=postgresql&envs=SESSION_NAME%2CBOT_TOKEN%2CAPI_ID%2CAPI_HASH%2CSUDO_USERS%2CDURATION_LIMIT&SESSION_NAMEDesc=Pyrogram+oturum+dizesi.&BOT_TOKENDesc=%40BotFather+dan+ald%C4%B1%C4%9F%C4%B1n%C4%B1z+tokeni+yaz%C4%B1n.&API_IDDesc=my.telegram.org+den+al%C4%B1nan+kodu+yaz%C4%B1n.&API_HASHDesc=my.telegram.org+den+al%C4%B1nan+hash+kodunu+yaz%C4%B1n.&SUDO_USERSDesc=Kullan%C4%B1c%C4%B1+id+sini+Rose+den+id+yaz%C4%B1p+al%C4%B1n.&DURATION_LIMITDesc=En+fazla+60+veya+45+yaz%C4%B1n%C4%B1z.)
 
 #### [SESSION ALMAK İÇİN TIKLA](https://t.me/@stringsessionbuzz_bot)
 ---------------------- 
