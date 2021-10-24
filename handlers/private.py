@@ -93,38 +93,3 @@ async def reload(_, message: Message):
             ]
         )
    )
-
-#help düğmesi için regex data filter
-
-@Client.on_callback_query(filters.regex("cbhelp"))
-async def cbhelp(_, query: CallbackQuery):
-      await query.reply_text(f"""<b> Selam {query.from_user.mention}!</>\n Bu botun yardım menüsü🥳
-__
-▶️ `/oynat` - şarkı çalmak için youtube url'sine veya şarkı dosyasına yanıt verme
-▶️ `/oynat` <şarkı ismi> - istediğiniz şarkıyı çal
-🔴 `/ytp` <Sorgu> - youtube üzerinden çalma
-🔍 `/ara` <query> - youtube'da ayrıntıları içeren videoları arama
-__
-**Yalnızca yöneticiler için..**__
-▶️ `/devam` - şarkı çalmaya devam et 
-⏩ `/atla` - sonraki şarkıyı çal 
-__
-**Asistanı grubunuza almak için..**
-__
-⚪ `/katil` - Müzik asistanı grubunuza katılır. 
-⚫ `/ayril` - Müzik asistanı grubunuzu terk eder.__""",
-      reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "⚙ Geliştirici", url="https://t.me/Bir_Beyfendi")
-                ],
-[
-InlineKeyboardButton("🛠 Destek Grubu", url="https://t.me/SohbetOdagi")
-],
-[ 
-InlineKeyboardButton(f"❌Kapat❌", calldata_back="cbsil")
-],
-            ]
-        )
-   )
