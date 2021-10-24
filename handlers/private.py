@@ -3,7 +3,14 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 from config import BOT_USARNAME, BOT_NAME as bot
 from helpers.filters import command, other_filters2
-#
+
+#kapat düğmesi için regex data filter 
+
+@Client.on_callback_query(filters.regex("cbsil"))
+async def cbsil(_, query: CallbackQuery):
+    await query.message.delete()
+
+#start mesajı 
 
 @Client.on_message(command(["start", f"start@{BOT_USARNAME}"]))
 async def start(_, message: Message):
@@ -30,7 +37,7 @@ Ben {bot}! Sesli sohbetlerde müzik çalabilen botum. Ban yetkisiz, Ses yönetim
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "🌀 Komutlar" , url = "https://telegra.ph/Komutlar-10-22"
+                        "🌀 Komutlar" , calldata_back = "cbhelp"
                     ),
                     InlineKeyboardButton(
                         "🎮 Oyun Botu", url="https://t.me/BasitOyunBot"
@@ -39,6 +46,8 @@ Ben {bot}! Sesli sohbetlerde müzik çalabilen botum. Ban yetkisiz, Ses yönetim
         ),
      disable_web_page_preview=True
     )
+
+#help mesajı 
 
 @Client.on_message(filters.command(["help", f"help@{BOT_USARNAME}"]) & ~filters.private & ~filters.channel)
 async def help(_, message: Message):
@@ -70,6 +79,8 @@ InlineKeyboardButton("🛠 Destek Grubu", url="https://t.me/SohbetOdagi")
         )
    )
 
+#reload mesajı
+
 @Client.on_message(filters.command(["reload", f"reload@{BOT_USARNAME}"]) & ~filters.private & ~filters.channel)
 async def reload(_, message: Message):
       await message.reply_text("""**Yeniden başlatıldı. Bot çalışıyor ✅**""",
@@ -79,6 +90,41 @@ async def reload(_, message: Message):
                     InlineKeyboardButton(
                         "⚙ Geliştirici", url="https://t.me/Bir_Beyfendi")
                 ]
+            ]
+        )
+   )
+
+#help düğmesi için regex data filter
+
+@Client.on_callback_query(filters.regex("cbhelp"))
+async def cbhelp(_, query: CallbackQuery):
+      await query.reply_text(f"""<b> Selam {query.from_user.mention}!</>\n Bu botun yardım menüsü🥳
+__
+▶️ `/oynat` - şarkı çalmak için youtube url'sine veya şarkı dosyasına yanıt verme
+▶️ `/oynat` <şarkı ismi> - istediğiniz şarkıyı çal
+🔴 `/ytp` <Sorgu> - youtube üzerinden çalma
+🔍 `/ara` <query> - youtube'da ayrıntıları içeren videoları arama
+__
+**Yalnızca yöneticiler için..**__
+▶️ `/devam` - şarkı çalmaya devam et 
+⏩ `/atla` - sonraki şarkıyı çal 
+__
+**Asistanı grubunuza almak için..**
+__
+⚪ `/katil` - Müzik asistanı grubunuza katılır. 
+⚫ `/ayril` - Müzik asistanı grubunuzu terk eder.__""",
+      reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "⚙ Geliştirici", url="https://t.me/Bir_Beyfendi")
+                ],
+[
+InlineKeyboardButton("🛠 Destek Grubu", url="https://t.me/SohbetOdagi")
+],
+[ 
+InlineKeyboardButton(f"❌Kapat❌", calldata_back="cbsil")
+],
             ]
         )
    )
