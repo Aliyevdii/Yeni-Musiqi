@@ -3,7 +3,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 from config import BOT_USARNAME, BOT_NAME as bot
 from helpers.filters import command, other_filters2
-
+#Bir_Beyfendi
 
 @Client.on_message(command(["start", f"start@{BOT_USARNAME}"]))
 async def start(_, message: Message):
