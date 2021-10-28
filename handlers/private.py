@@ -53,3 +53,15 @@ async def reload(_, message: Message):
         )
    )
 
+@Client.on_message(filters.command(["help", f"help@{BOT_USARNAME}"]) & ~filters.private & ~filters.channel)
+async def help(_, message: Message):
+      await message.reply_text("""**Selam {message.from_user.mention}!\n Bu botun yardım menüsü 🤩\n\n ▶️ /oynat - şarkı çalmak için youtube url'sine veya şarkı dosyasına yanıt verme\n ▶️ /oynat <song name> - istediğiniz şarkıyı çal\n 🔴 /ytp <Sorgu> - youtube üzerinden çalma\n 🎵 /sarki <song name> - istediğiniz şarkıları hızlı bir şekilde indirin\n 🔍 /ara <query> - youtube'da ayrıntıları içeren videoları arama\n\n Yalnızca yöneticiler için..\n ▶️ /devam - şarkı çalmaya devam et\n ⏹ /bitir - müzik çalmayı durdurma\n\n ⚪ /katil - Müzik asistanı grubunuza katılır\n ⚫ /ayril - Müzik asistanı grubunuzu terk eder.**""",
+      reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "⚙ Geliştirici", url="https://t.me/Bir_Beyfendi")
+                ]
+            ]
+        )
+   )
