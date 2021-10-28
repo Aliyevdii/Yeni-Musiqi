@@ -152,7 +152,7 @@ async def oynat(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Kanal 🔊",
+                        text="Grup 🎧",
                         url="https://t.me/SohbetOdagi")
                    
                 ]
