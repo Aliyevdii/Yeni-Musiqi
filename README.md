@@ -35,8 +35,8 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BirBeyfendi/BeyfendiMusicVaves-1)
 
 ## Demiryolu Dağıtımı 🚄
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Frailwayapp%2Fexamples%2Ftree%2Fmaster%2Fexamples%2Fflask&plugins=postgresql&envs=API_HASH%2CAPI_ID%2CBOT_TOKEN%2CSESSION_NAME%2CBOT_USARNAME%2CBOT_NAME%2CDURATION_LIMIT%2CSUDO_USERS&API_HASHDesc=my.telegram.org%27dan+al%C4%B1n.&API_IDDesc=my.telegram.org%27dan+al%C4%B1n.+&BOT_TOKENDesc=%40botfather%27dan+Al%C4%B1n.&SESSION_NAMEDesc=Pyrogram+String+Session&BOT_USARNAMEDesc=Botunuzun+Kullan%C4%B1c%C4%B1+Ad%C4%B1&DURATION_LIMITDesc=S%C3%BCre+s%C4%B1n%C4%B1r%C4%B1&SUDO_USERSDesc=Sudo+Kullan%C4%B1c%C4%B1lar&DURATION_LIMITDefault=60&referralCode=aylak)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FBirBeyfendi%2FBeyfendiMusicVaves-1&plugins=postgresql&envs=API_HASH%2CAPI_ID%2CBOT_NAME%2CBOT_TOKEN%2CBOT_USERNAME%2CDURATION_LIMIT%2CSESSION_NAME%2CSUDO_USERS&API_HASHDesc=my.telegram.org+adresinden+kodu+al%C4%B1p+yaz%C4%B1n%C4%B1z&API_IDDesc=my.telegram.org+adresinden+kodu+al%C4%B1p+yaz%C4%B1n%C4%B1z+&BOT_NAMEDesc=Botunuzun+ismini+yaz%C4%B1n%C4%B1z&BOT_TOKENDesc=%40BotFather+dan+ald%C4%B1%C4%9F%C4%B1n%C4%B1z+tokeni+yaz%C4%B1n+&BOT_USERNAMEDesc=Botunuzun+kullan%C4%B1c%C4%B1+ad%C4%B1n%C4%B1+yaz%C4%B1n%C4%B1z&DURATION_LIMITDesc=%C4%B0ndirmeler+i%C3%A7in+en+fazla+ses+s%C3%BCresi+s%C4%B1n%C4%B1r%C4%B1&SESSION_NAMEDesc=Pyrogram+oturum+dizesi&SUDO_USERSDesc=Asistan+hesab%C4%B1n+kullan%C4%B1c%C4%B1+id+si&DURATION_LIMITDefault=55)
 
-#### [SESSION ALMAK İÇİN TIKLA](https://t.me/@stringsessionbuzz_bot)
+#### [SESSION ALMAK İÇİN TIKLA](https://replit.com/@aylak-github/Pyrogram-String-Session-Olusturucu?v=1)
 ---------------------- 
 ### 21 Ekim Perşembe - Güncel ve Seri çalışıyor... 🤫 Sorunlar Giderildi... 
