@@ -23,6 +23,11 @@
       "required": true,
       "value": ""
     },
+    "ASSISTAN_USERNAME": {
+      "description": "Asistan Hesabınızın Kullanıcı Adını Yazınız.",
+      "required": true,
+      "value": ""
+    },
     "API_ID": {
       "description": "my.telegram'dan uygulama kimliği.org/apps",
       "required": true
