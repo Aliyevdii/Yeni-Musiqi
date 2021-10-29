@@ -22,7 +22,7 @@ def sarki(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('🔎 Şarkıyı bulma...')
+    m = message.reply('🔎 Şarkı bulunuyor...')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -45,7 +45,7 @@ def sarki(client, message):
         )
         print(str(e))
         return
-    m.edit("Şarkıyı indirme @Efsanestar_bot...")
+    m.edit("Şarkı indiriliyor...")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
