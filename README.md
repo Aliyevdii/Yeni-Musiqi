@@ -19,7 +19,8 @@
 - `/oynat` - şarkı çalmak için youtube url'sine veya şarkı dosyasına yanıt verme
 - `/oynat <song name>` - istediğiniz şarkıyı çal
 - `/ytp <Sorgu>` - youtube üzerinden çalma
-- `/sarki <song name>` - istediğiniz şarkıları hızlı bir şekilde indirin 
+- `/bul <song name>` - istediğiniz şarkıları hızlı bir şekilde bulun
+- `/vbul` - istediğiniz videoları hızlı bir şekilde bulun
 - `/ara <query>` - youtube'da ayrıntıları içeren videoları arama
 
 #### Yalnızca yöneticiler 
