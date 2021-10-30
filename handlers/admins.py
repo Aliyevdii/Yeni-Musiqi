@@ -106,9 +106,9 @@ async def deautenticate(client, message):
         await message.reply("✔ Kullanıcının yetkisi alındı!")
 
 
-@Client.on_message(command(["volume"]) & other_filters)
+@Client.on_message(command(["ses"]) & other_filters)
 @authorized_users_only
-async def change_volume(client, message):
+async def change_ses(client, message):
     range = message.command[1]
     chat_id = message.chat.id
     try:
