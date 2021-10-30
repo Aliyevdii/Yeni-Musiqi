@@ -12,7 +12,7 @@ ASSISTAN_USERNAME = getenv("ASSISTAN_USERNAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
-PMPERMİT = getenv("PMPERMIT", none)
+PMPERMİT = getenv("PMPERMIT")
 
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
