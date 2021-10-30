@@ -1,8 +1,11 @@
 from asyncio.queues import QueueEmpty
-
-from pyrogram import Client
+ 
+from pyrogram import Client, filters 
 from pyrogram.types import Message
-from callsmusic import callsmusic
+from helpers.channelmusic import get_chat_id
+from cache.admins import admins
+
+import callsmusic
 
 from config import BOT_NAME as BN
 from helpers.filters import command, other_filters
@@ -108,7 +111,7 @@ async def deautenticate(client, message):
 
 @Client.on_message(command(["ses"]) & other_filters)
 @authorized_users_only
-async def change_ses(client, message):
+async def ses(client, message):
     range = message.command[1]
     chat_id = message.chat.id
     try:
@@ -116,3 +119,16 @@ async def change_ses(client, message):
        await message.reply(f"✅ **Birim olarak ayarlandı:** ```{range}%```")
     except Exception as e:
        await message.reply(f"**hata:** {e}")
+
+@Client.on_message(command("help") & filters.group & ~ filters.edited)
+async def helper(client , message:Message):
+await message.reply_text(f"""**Selam {message.from_user.mention}!\n Bu botun yardım menüsü 🤩\n\n ▶️ /oynat - şarkı çalmak için youtube url'sine veya şarkı dosyasına yanıt verme\n ▶️ /oynat <song name> - istediğiniz şarkıyı çal\n 🔴 /ytp <Sorgu> - youtube üzerinden çalma\n 🎵 /bul <song name> - istediğiniz şarkıları hızlı bir şekilde bulun\n 🎵 /vbul istediğiniz videoları hızlı bir şekilde bulun\n 🔍 /ara <query> - youtube'da ayrıntıları içeren videoları arama\n\n Yalnızca yöneticiler için..\n ▶️ /devam - şarkı çalmaya devam et\n ⏹ /bitir - müzik çalmayı durdurma\n 🔼 /ver botun komutlarını kullanabilmesi için kullanıcıya yetki ver\n 🔽 /al botun komutlarını kullanabilen kullanıcının yetkisini al\n 🎚 /ses asistan hesabın ses seviyesini kontrol et\n\n ⚪ /katil - Müzik asistanı grubunuza katılır\n ⚫ /ayril - Müzik asistanı grubunuzu terk eder.**""",
+      reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "⚙ Geliştirici", url="https://t.me/Bir_Beyfendi")
+                ]
+            ]
+        )
+   )
