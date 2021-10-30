@@ -16,25 +16,30 @@ Ben {bot}! Sesli sohbetlerde müzik çalabilen botum. Ban yetkisiz, Ses yönetim
             [
                 [
                     InlineKeyboardButton(
+                        "➕ Grubuna ekle ➕", url="https://t.me/HerTeldenMuzikBot?startgroup=true"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
                         "🏷️ Destek Grubu", url="https://t.me/SohbetOdagi"
-                    ),
+                    )
+                ],
+                [
                     InlineKeyboardButton(
                         "🔧 Geliştirici", url = "https://t.me/Bir_Beyfendi"
-                    )
-                  ],[
-                    InlineKeyboardButton(
-                        "🛠 Kurucu" , url = "https://t.me/Mahoaga"
                     ),
                     InlineKeyboardButton(
                         "🔊 Asistan" , url = "https://t.me/HerTeldenAsistan"
                     )
-                ],[ 
+                ],
+                [ 
                     InlineKeyboardButton(
                         "🌀 Komutlar" , url = "https://telegra.ph/Komutlar-10-22"
                     ),
                     InlineKeyboardButton(
                         "🎮 Oyun Botu", url="https://t.me/BasitOyunBot"
-                    )]
+                    )
+                ]
             ]
         ),
      disable_web_page_preview=True
