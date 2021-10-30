@@ -5,7 +5,7 @@ from config import BOT_USERNAME, BOT_NAME as bot
 from helpers.filters import command, other_filters2
 #Bir_Beyfendi
 
-@Client.on_message(command(["start", f"start@{BOT_USARNAME}"]))
+@Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, message: Message):
     await message.reply_photo("https://i.ibb.co/MpdcXYM/IMG-20211023-135851-221.jpg")
     await message.reply_text(
@@ -40,7 +40,7 @@ Ben {bot}! Sesli sohbetlerde müzik çalabilen botum. Ban yetkisiz, Ses yönetim
      disable_web_page_preview=True
     )
 
-@Client.on_message(filters.command(["reload", f"reload@{BOT_USARNAME}"]) & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command(["reload", f"reload@{BOT_USERNAME}"]) & ~filters.private & ~filters.channel)
 async def reload(_, message: Message):
       await message.reply_text("""**Yeniden başlatıldı. Bot çalışıyor ✅**""",
       reply_markup=InlineKeyboardMarkup(
@@ -53,7 +53,7 @@ async def reload(_, message: Message):
         )
    )
 
-@Client.on_message(filters.command(["help", f"help@{BOT_USARNAME}"]))
+@Client.on_message(filters.command(["help", f"help@{BOT_USERNAME}"]))
 async def help(_, message: Message):
       await message.reply_text(f"""**Selam {message.from_user.mention}!\n Bu botun yardım menüsü 🤩\n\n ▶️ /oynat - şarkı çalmak için youtube url'sine veya şarkı dosyasına yanıt verme\n ▶️ /oynat <song name> - istediğiniz şarkıyı çal\n 🔴 /ytp <Sorgu> - youtube üzerinden çalma\n 🎵 /bul <song name> - istediğiniz şarkıları hızlı bir şekilde bulun\n 🎵 /vbul istediğiniz videoları hızlı bir şekilde bulun\n 🔍 /ara <query> - youtube'da ayrıntıları içeren videoları arama\n\n Yalnızca yöneticiler için..\n ▶️ /devam - şarkı çalmaya devam et\n ⏹ /bitir - müzik çalmayı durdurma\n\n ⚪ /katil - Müzik asistanı grubunuza katılır\n ⚫ /ayril - Müzik asistanı grubunuzu terk eder.**""",
       reply_markup=InlineKeyboardMarkup(
