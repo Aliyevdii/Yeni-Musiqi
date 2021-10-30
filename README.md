@@ -22,6 +22,8 @@
 - `/bul <song name>` - istediğiniz şarkıları hızlı bir şekilde bulun
 - `/vbul` - istediğiniz videoları hızlı bir şekilde bulun
 - `/ara <query>` - youtube'da ayrıntıları içeren videoları arama
+- `/yenile` - botu tekrar başlatır
+- `/bilgi` - botun bilgi menüsünü (komut menüsü) gösterir
 
 #### Yalnızca yöneticiler 
 - `/durdur` - şarkı çalmayı duraklatma 
