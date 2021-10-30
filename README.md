@@ -30,6 +30,7 @@
 - `/bitir` - müzik çalmayı durdurma
 - `/ver` - botun komutlarını kullanabilmesi için kullanıcıya yetki ver
 - `/al` - botun komutlarını kullanabilen kullanıcının yetkisini al
+- `/ses` - asistan hesabın ses seviyesini kontrol et
 
 #### Grubunuza Almak için.. 
 - `/katil` - Müzik asistanı  grubunuza katılır. 
