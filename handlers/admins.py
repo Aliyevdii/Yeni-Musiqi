@@ -74,7 +74,7 @@ async def atla(_, message: Message):
 
         await message.reply_text("⏭️ **__Şarkı bir sonraki kuyruğa atlatıldı__**")
 
-@Client.on_message(filters.command("ver"))
+@Client.on_message(command("ver"))
 @authorized_users_only
 async def authenticate(client, message):
     global admins
@@ -90,7 +90,7 @@ async def authenticate(client, message):
         await message.reply("✔ Kullanıcı Zaten Yetkili!")
 
 
-@Client.on_message(filters.command("al"))
+@Client.on_message(command("al"))
 @authorized_users_only
 async def deautenticate(client, message):
     global admins
