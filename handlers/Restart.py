@@ -1,4 +1,3 @@
-from handlers import check_heroku
 from helpers.filters import command
 from pyrogram import Client, filters
 from pyrogram import Client, filters
@@ -8,7 +7,6 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 @Client.on_message(command(["yenile", "reboot"]) & ~filters.edited)
 @sudo_users_only
-@check_heroku
 async def gib_yenile(client, message, hap):
     msg_ = await message.reply_photo(
                                      photo="https://te.legra.ph/file/813885c3687f7a6277315.jpg", 
