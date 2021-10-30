@@ -18,7 +18,7 @@
       "required": true,
       "value": ""
     },
-    "BOT_USARNAME": {
+    "BOT_USERNAME": {
       "description": "MusicPlayer Bot Kullanıcı Adınız.",
       "required": true,
       "value": ""
