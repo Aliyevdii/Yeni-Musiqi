@@ -28,6 +28,8 @@
 - `/devam` - şarkı çalmaya devam et 
 - `/atla` - sonraki şarkıyı çal 
 - `/bitir` - müzik çalmayı durdurma
+- `/ver` - botun komutlarını kullanabilmesi için kullanıcıya yetki ver
+- `/al` - botun komutlarını kullanabilen kullanıcının yetkisini al
 
 #### Grubunuza Almak için.. 
 - `/katil` - Müzik asistanı  grubunuza katılır. 
