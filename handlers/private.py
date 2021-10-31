@@ -9,8 +9,7 @@ from helpers.filters import command, other_filters2
 async def start(_, message: Message):
     await message.reply_photo("https://i.ibb.co/MpdcXYM/IMG-20211023-135851-221.jpg")
     await message.reply_text(
-        f"""**Merhaba, {message.from_user.mention} 🎵
-Ben {bot}! Sesli sohbetlerde müzik çalabilen botum. Ban(kullanıcıları yasaklama) yetkisine gerek olmadan, Sesli sohbetleri yönetme yetkisi, Mesaj silme yetkisi ve Bağlantı ile davet etme verip, Asistanı gruba ekleyiniz. Komutlar için /bilgi komutunu kullanın.**""",
+        f"""**Merhaba, {message.from_user.mention} 🎵\n Ben {bot}!\n Sesli sohbetlerde müzik çalabilen botum.\n Ban(kullanıcıları yasaklama) yetkisine gerek olmadan, Sesli sohbetleri yönetme yetkisi, Mesaj silme yetkisi ve Bağlantı ile davet etme verip, Asistanı gruba ekleyiniz.\n Komutlar için /bilgi komutunu kullanın.**""",
 
         reply_markup=InlineKeyboardMarkup(
             [
