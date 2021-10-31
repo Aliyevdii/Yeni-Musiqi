@@ -9,7 +9,7 @@ from helpers.filters import command, other_filters2
 async def start(client, message):
      msg_ = await message.reply_photo(
                                       photo="https://i.ibb.co/MpdcXYM/IMG-20211023-135851-221.jpg")
-                                      caption=f"""**Merhaba, {message.from_user.mention} 🎵\n Ben {bot}!\n Sesli sohbetlerde müzik çalabilen botum.\n Ban(kullanıcıları yasaklama) yetkisine gerek olmadan, Sesli sohbetleri yönetme yetkisi, Mesaj silme yetkisi ve Bağlantı ile davet etme verip, Asistanı gruba ekleyiniz.\n Komutlar için /bilgi komutunu kullanın.**""",
+                                      caption="**Merhaba, {message.from_user.mention} 🎵\n Ben {bot}!\n Sesli sohbetlerde müzik çalabilen botum.\n Ban(kullanıcıları yasaklama) yetkisine gerek olmadan, Sesli sohbetleri yönetme yetkisi, Mesaj silme yetkisi ve Bağlantı ile davet etme verip, Asistanı gruba ekleyiniz.\n Komutlar için /bilgi komutunu kullanın.**""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
