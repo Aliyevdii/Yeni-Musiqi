@@ -30,11 +30,11 @@
     },
     "HEROKU_API_KEY": {
       "description": "Heroku api anahtarınız (Ayarlar veya çark simgesine basarak alın) https://dashboard.heroku.com/account",
-      "required": false
+      "required": true
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku uygulamanızın adı",
-      "required": false
+      "required": true
     },
     "API_ID": {
       "description": "my.telegram'dan uygulama kimliği.org/apps",
