@@ -7,7 +7,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 
 @Client.on_message(command(["restart"]) & ~filters.edited)
-@sudo_users_only
+@authorized_users_only
 @check_heroku
 async def gib_restart(client, message, hap):
     msg_ = await message.reply_photo(
