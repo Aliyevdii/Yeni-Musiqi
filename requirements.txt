@@ -1,18 +1,20 @@
-pip3 uninstall -y pyrogram && pip3 install git
-https://github.com/pyrogram/pyrogram.git
+pyrogram
 TgCrypto
-Py-tgcalls==0.5.5
+py-tgcalls==0.5.5
 python-dotenv
 youtube_dl
 youtube_search_python==1.4.6 
 requests
 aiohttp
 aiofiles
+wget
 asyncio
 youtube_search
 search_engine_parser
-wget
 ffmpeg
 Pillow
 ujson
 yt_dlp
+ffmpeg-python
+heroku
+dnspython
