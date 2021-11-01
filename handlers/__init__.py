@@ -1,9 +1,9 @@
-import heroku
+import heroku3
 from functools import wraps
 from config import HEROKU_API_KEY, HEROKU_APP_NAME
 
 
-heroku_client = heroku.from_key(HEROKU_API_KEY) if HEROKU_API_KEY else None
+heroku_client = heroku3.from_key(HEROKU_API_KEY) if HEROKU_API_KEY else None
 
 
 def check_heroku(func):
