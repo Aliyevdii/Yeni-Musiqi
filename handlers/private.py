@@ -9,9 +9,7 @@ from helpers.filters import command, other_filters2
 async def start(_, client, message: Message):
      msg_ = await message.reply_photo(
                                       photo="https://i.ibb.co/MpdcXYM/IMG-20211023-135851-221.jpg",
-                                      caption="**Merhaba {message.from_user.mention} 🎵**\n **Ben {bot}!**\n **Sesli sohbetlerde müzik çalabilen botum.**\n **Ban(kullanıcıları yasaklama) yetkisine gerek olmadan**, **Sesli sohbetleri yönetme yetkisi**, **Mesaj silme yetkisi ve Bağlantı ile davet etme verip**, **Asistanı gruba ekleyiniz.**\n **Komutlar için /bilgi komutunu kullanın.**"
-                    )
-
+                                      caption="**Merhaba {message.from_user.mention} 🎵**\n **Ben {bot}!**\n **Sesli sohbetlerde müzik çalabilen botum.**\n **Ban(kullanıcıları yasaklama) yetkisine gerek olmadan**, **Sesli sohbetleri yönetme yetkisi**, **Mesaj silme yetkisi ve Bağlantı ile davet etme verip**, **Asistanı gruba ekleyiniz.**\n **Komutlar için /bilgi komutunu kullanın.**",                    
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -41,9 +39,10 @@ async def start(_, client, message: Message):
                     )
                 ]
             ]
-        ),
+        )
+     ),
      disable_web_page_preview=True
-    )
+   )
 
 @Client.on_message(command(["bilgi", f"bilgi@{BOT_USERNAME}"])) 
 async def bilgi(_, message: Message):
