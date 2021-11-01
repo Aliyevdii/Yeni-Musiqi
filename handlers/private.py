@@ -40,9 +40,9 @@ async def start(_, client, message: Message):
                 ]
             ]
         )
-     ),
+     )
      disable_web_page_preview=True
-   )
+   ),
 
 @Client.on_message(command(["bilgi", f"bilgi@{BOT_USERNAME}"])) 
 async def bilgi(_, message: Message):
