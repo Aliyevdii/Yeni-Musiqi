@@ -15,6 +15,7 @@
 - [PyTgCalls](https://github.com/pytgcalls/pytgcalls)
 
 ### Komutlar 🛠
+
 #### Gruptaki herkes için 
 - `/oynat` - şarkı çalmak için youtube url'sine veya şarkı dosyasına yanıt verme
 - `/oynat <song name>` - istediğiniz şarkıyı çal
