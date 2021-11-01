@@ -7,8 +7,7 @@ from helpers.filters import command, other_filters2
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(client: Client, message: Message):
-    await message.reply_photo(
-    photo="https://i.ibb.co/MpdcXYM/IMG-20211023-135851-221.jpg",
+    await message.reply_photo(photo="https://i.ibb.co/MpdcXYM/IMG-20211023-135851-221.jpg",
     caption="**Merhaba {} 🎵\n Ben {}!\n Sesli sohbetlerde müzik çalabilen botum.\n Ban(kullanıcıları yasaklama) yetkisine gerek olmadan, Sesli sohbetleri yönetme yetkisi, Mesaj silme yetkisi ve Bağlantı ile davet etme verip, Asistanı gruba ekleyiniz.\n Komutlar için /bilgi komutunu kullanın.**".format(
 message.from_user.mention, bot
 ),
