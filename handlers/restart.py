@@ -12,6 +12,6 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 async def gib_restart(client, message, hap):
     msg_ = await message.reply_photo(
                                      photo="https://te.legra.ph/file/813885c3687f7a6277315.jpg", 
-                                     caption="**Restart atılıyor**\n**Lütfen bekleyin**\n**Muhtemelen 5 dakika sürecektir...**"
+                                     caption="**Yenidən işə salınma aparılır**\n**Zəhmət olmasa gözləyin**\n**Bu, yəqin ki, 5 dəqiqə çəkəcək...**"
    )
     hap.restart()
