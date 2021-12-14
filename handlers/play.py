@@ -92,7 +92,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                    & ~filters.via_bot)
 async def oynat(_, message: Message):
 
-    lel = await message.reply("🔄 **ʟüᴛꜰᴇɴ ʙᴇᴋʟᴇʏɪɴɪᴢ...**")
+    lel = await message.reply("🔄 **Asistan Səsliyə qoşulur...**")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -112,24 +112,24 @@ async def oynat(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Önce beni Grubunun yöneticisi olarak ekle!</b>")
+                        "<b>Əvvəlcə məni Qrupunuzun admini olaraq əlavə edin!</b>")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**Müzik asistanı bu gruba müzik çalmak için katıldı 🎵**")
+                        message.chat.id, "**Musiqi köməkçisi musiqi oynamaq üçün bu qrupa qoşuldu 🎵**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>🛑 Taşan Bekleme Hatası 🛑</b> \n\Merhaba {user.first_name}, yardımcı userbot, yoğun katılma istekleri nedeniyle grubunuza katılamadı. Userbot'un grupta yasaklı olmadığından emin olun ve daha sonra yeniden deneyin!")
+                        f"<b>🛑 Daşan Gözləmə Xətası 🛑</b> \n\Salam {user.first_name}, Faydalı userbot çoxlu qoşulma sorğularına görə qrupunuza qoşula bilmədi. Userbotun qrupda qadağan edilmədiyinə əmin olun və sonra yenidən cəhd edin!")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>Merhaba {user.first_name}, yardımcı userbot bu sohbette değil, yöneticiden göndermesini isteyin /play ilk kez eklemek için komut.</i>")
+            f"<i>Merhaba {user.first_name}, köməkçi userbot bu söhbətdə deyil, admindən ilk dəfə əlavə etmək üçün /play əmrini göndərməsini xahiş edin.</i>")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
@@ -138,7 +138,7 @@ async def oynat(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ Daha uzun videolar {DURATION_LIMIT} dakikaların oynatılamasına izin verilmez!"
+                f"❌ daha uzun videolar {DURATION_LIMIT} dəqiqə oynamağa icazə verilmir!"
             )
 
         file_name = get_file_name(audio)
@@ -193,7 +193,7 @@ async def oynat(_, message: Message):
                             text="YouTube 🎬",
                             url=f"{url}"),
                         InlineKeyboardButton(
-                            text="İndir 📥",
+                            text="Endir 📥",
                             url=f"{durl}")
 
                     ]
@@ -215,18 +215,18 @@ async def oynat(_, message: Message):
                     ]
                 )
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"❌ Daha uzun videolar {DURATION_LIMIT} dakikaların oynatılamasına izin verilmez!")
+             await lel.edit(f"❌ daha uzun videolar {DURATION_LIMIT} dəqiqə oynamağa icazə verilmir!")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)     
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await lel.edit("🧐 **Söylemek istediğin şarkı nedir?**")
-        await lel.edit("🔎 **Lütfen bekleyiniz...**")
+            return await lel.edit("🙄 **Hansı mahnını oxumaq istəyirsən?**")
+        await lel.edit("🔎 **Zəhmət olmasa, gözləyin...**")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("🔁 **Sesler İşleniyor..🔥**")
+        await lel.edit("🔁 **Səs İşlənir..🔥**")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -249,7 +249,7 @@ async def oynat(_, message: Message):
                 
         except Exception as e:
             await lel.edit(
-                "❌ Şarkı bulunamadı.\n\nBaşka bir şarkı deneyin veya belki düzgün heceleyin."
+                "❌ Mahnı tapılmadı.\n\nBaşqa mahnını sınayın və ya düzgün yaza bilərsiniz."
             )
             print(str(e))
             return
@@ -261,7 +261,7 @@ async def oynat(_, message: Message):
                             text="YouTube 🎬",
                             url=f"{url}"),
                         InlineKeyboardButton(
-                            text="İndir 📥",
+                            text="Endir 📥",
                             url=f"{durl}")
 
                     ]
@@ -269,7 +269,7 @@ async def oynat(_, message: Message):
             )
         
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"❌ Daha uzun videolar {DURATION_LIMIT} dakikaların oynatılamasına izin verilmez!")
+             await lel.edit(f"❌ daha uzun videolar {DURATION_LIMIT} dəqiqə oynamağa icazə verilmir!")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)  
@@ -279,7 +279,7 @@ async def oynat(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png",
-        caption="**🎵 şᴀʀᴋɪ:** {}\n**🕒 ꜱüʀᴇ:** {} min\n**👤 ᴇᴋʟᴇʏᴇɴ:** {}\n\n**#⃣ Kuyruğa Atılmış Konum:** {}".format(
+        caption="**🎵 Musiqi:** {}\n**🕒 Vaxt:** {} min\n**👤 İfaçı:** {}\n\n** Növbəyə qoyulmuş mövqe:** {}".format(
         title, duration, message.from_user.mention(), position
         ),
         reply_markup=keyboard)
@@ -290,7 +290,7 @@ async def oynat(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="**🎵 şᴀʀᴋɪ:** {}\n**🕒 ꜱüʀᴇ:** {} min\n**👤 ᴇᴋʟᴇʏᴇɴ:** {}\n\n**▶️ Şimdi şu anda `{}`...**".format(
+        caption="**🎵 Musiqi:** {}\n**🕒 Vaxt:** {} min\n**👤 İfaçı:** {}\n\n**▶️ İndiki Musiqi `{}`...**".format(
         title, duration, message.from_user.mention(), message.chat.title
         ), )
         os.remove("final.png")
