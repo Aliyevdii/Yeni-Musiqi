@@ -37,7 +37,7 @@ async def devam(_, message: Message):
     ):
          await message.reply_text("❗ Hiçbir şey duraklatılmadı!")
     else:
-.pytgcalls.resume_stream(message.chat.id)
+        callsmusic.pytgcalls.resume_stream(message.chat.id)
         await message.reply_text("⏸ **Musiqi davam edir!**\n\n• **istifadəni dayandırmaq əmri » durdur**")
 
 
