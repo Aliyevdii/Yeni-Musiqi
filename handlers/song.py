@@ -36,7 +36,7 @@ ydl_opts = {
 @Client.on_message(command(["bul", f"bul@{bn}"]) & ~filters.edited)
 def bul(_, message):
     query = " ".join(message.command[1:])
-    m = message.reply("🔎 Şarkı Aranıyor..")
+    m = message.reply("🔎 Musiqi Axtarılır...")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -49,21 +49,21 @@ def bul(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("❌ şarkı bulunamadı.\n\nlütfen geçerli bir şarkı adı verin.")
+        m.edit("❌ mahnı tapılmadı.\n\nLütfən düzgün mahnı adı verin.")
         print(str(e))
         return
-    m.edit("⏱️ Sorgulanıyor...")
+    m.edit("⏱️ Gözləyin...")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"**🎵 İndirildi.**"
+        rep = f"**🎵 Endirdi.**"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
-        m.edit("📥 Yüklüyorum...")
+        m.edit("📥 Yüklənir...")
         message.reply_audio(
             audio_file,
             caption=rep,
@@ -74,7 +74,7 @@ def bul(_, message):
         )
         m.delete()
     except Exception as e:
-        m.edit("❌ hatanın, düzelmesini bekleyiniz.")
+        m.edit("❌ xətanın düzəldilməsini gözləyin.")
         print(e)
 
     try:
@@ -241,14 +241,14 @@ async def vsong(client, message):
     except Exception as e:
         print(e)
     try:
-        msg = await message.reply("📥 **video indiriliyor...**")
+        msg = await message.reply("📥 **video Endirilir...**")
         with YoutubeDL(ydl_opts) as ytdl:
             ytdl_data = ytdl.extract_info(link, download=True)
             file_name = ytdl.prepare_filename(ytdl_data)
     except Exception as e:
-        return await msg.edit(f"🚫 **error:** {e}")
+        return await msg.edit(f"🚫 **xəta:** {e}")
     preview = wget.download(thumbnail)
-    await msg.edit("📤 **video yükleniyor...**")
+    await msg.edit("📤 **video yükləbir...**")
     await message.reply_video(
         file_name,
         duration=int(ytdl_data["duration"]),
