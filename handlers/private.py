@@ -36,11 +36,10 @@ message.from_user.mention, bot
                         "🌀 Əmirlər" , url = "https://telegra.ph/Komutlar-10-22"
                     ),
                     InlineKeyboardButton(
-                        "🎮 Oyun Botu", url="https://t.me/BasitOyunBot"
+                        "💭 Sohbet Gurupmuz", url="https://t.me/iron_Blood_Gurup"
                     )
                 ]
             ]
-        )
         )
 
 @Client.on_message(command(["bilgi", f"bilgi@{BOT_USERNAME}"]))
