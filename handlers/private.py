@@ -12,7 +12,7 @@ async def start(client: Client, message: Message):
 message.from_user.mention, bot
 ),
 reply_markup=keyboard
-    reply_markup=InlineKeyboardMarkup(
+    reply_markup=InlineKeyboardButton(
             [
                 [
                     InlineKeyboardButton(
