@@ -11,8 +11,7 @@ async def start(client: Client, message: Message):
     caption="**Salak {} 🎵\n Mən {}!\n Səsli söhbətlərdə musiqi oxuya bilən botum.\n Qadağaya ehtiyac olmadan (istifadəçilərə qadağa) səsli çatları idarə etmək, mesajları silmək və Link ilə dəvət etmək icazəsi verməklə Assistenti qrupa əlavə edin.\n Komandalar üçün, /bilgi əmri .**").format(
 message.from_user.mention, bot
 ),
-reply_markup=keyboard
-    reply_markup=InlineKeyboardButton(
+    reply_markup=InlineKeyboardMarkub(
             [
                 [
                     InlineKeyboardButton(
