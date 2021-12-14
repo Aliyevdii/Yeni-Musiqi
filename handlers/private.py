@@ -37,7 +37,7 @@ message.from_user.mention, bot
                     ),
                     InlineKeyboardButton(
                         "🎮 Oyun Botu", url="https://t.me/Nexus_soz_game_bot"
-                    )
+                  )
                 ]
             ]
         ),
