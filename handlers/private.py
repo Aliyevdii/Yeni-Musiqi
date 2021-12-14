@@ -36,13 +36,13 @@ message.from_user.mention, bot
                         "🌀 Əmirlər" , url = "https://telegra.ph/Komutlar-10-22"
                     ),
                     InlineKeyboardButton(
-                        "🎮 Oyun Botu", url="https://t.me/Nexus_soz_game_bot"
-                  )
+                        "🎮 Oyun Botu", url="https://t.me/BasitOyunBot"
+                    )
                 ]
             ]
         )
         )
-   
+
 @Client.on_message(command(["bilgi", f"bilgi@{BOT_USERNAME}"]))
 async def bilgi(_, message: Message):
       await message.reply_text(f"**Salam {message.from_user.mention}!\n Bu botun məlumat menyusu 🤓\n\n ▶️ /oynat - şarkı çalmak için youtube url'sine veya şarkı dosyasına yanıt verme\n ▶️ /oynat <song name> - istediğiniz şarkıyı çal\n 🔴 /ytp <Sorgu> - youtube üzerinden çalma\n 🎵 /bul <song name> - istediğiniz şarkıları hızlı bir şekilde bulun\n 🎵 /vbul istediğiniz videoları hızlı bir şekilde bulun\n 🔍 /ara <query> - youtube'da ayrıntıları içeren videoları arama\n\n Yalnızca yöneticiler için..\n ▶️ /devam - şarkı çalmaya devam et\n ⏹ /bitir - müzik çalmayı durdurma\n 🔼 /ver botun sadece yönetici için kullanılabilir olan komutlarını kullanabilmesi için kullanıcıya yetki ver\n 🔽 /al botun yönetici komutlarını kullanabilen kullanıcının yetkisini al\n 🎚 /ses asistan hesabın ses seviyesini kontrol et\n\n ⚪ /katil - Müzik asistanı grubunuza katılır\n ⚫ /ayril - Müzik asistanı grubunuzu terk eder.\n\n ❗ Not:\n Botun aktif çalışması için şu üç yetkiye ihtiyaç vardır:\n - Mesaj silme yetkisi,\n - Bağlantı ile davet etme yetkisi,\n - Sesli sohbeti yönetme yetkisi.**", 
