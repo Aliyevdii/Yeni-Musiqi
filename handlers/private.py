@@ -8,7 +8,7 @@ from helpers.filters import command, other_filters2
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(client: Client, message: Message):
     await message.reply_photo(photo_text="https://i.ibb.co/MpdcXYM/IMG-20211023-135851-221.jpg",
-    caption="**Salam {} 🎵\n Mən {}!\n Səsli çatlarda musiqi oxuya bilən botum.\n Qadağa (istifadəçilərə qadağa) səlahiyyəti olmadan Link ilə səsli söhbətləri idarə etməyə, mesajları silməyə və dəvət etməyə və qrupa Assistent göndərməyə imkan verir. .\n Əmrlər üçün /bilgi əmrindən istifadə edin.**").format(
+    caption="**Salak {} 🎵\n Mən {}!\n Səsli söhbətlərdə musiqi oxuya bilən botum.\n Qadağaya ehtiyac olmadan (istifadəçilərə qadağa) səsli çatları idarə etmək, mesajları silmək və Link ilə dəvət etmək icazəsi verməklə Assistenti qrupa əlavə edin.\n Komandalar üçün, /bilgi əmri .**").format(
 message.from_user.mention, bot
 ),
 reply_markup=keyboard
@@ -16,12 +16,12 @@ reply_markup=keyboard
             [
                 [
                     InlineKeyboardButton(
-                        "➕Məni Grubuna eklə ➕", url="https://t.me/NexusMusiicbot?startgroup=true"
+                        "➕ Məni Grubuna eklə ➕", url="https://t.me/NexusMusiicbot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌐 Supprt", url="https://t.me/NEXUS_MMC"
+                        "🌐 Support Grubu", url="https://t.me/NEXUS_MMC"
                     )
                 ],
                 [
@@ -47,7 +47,7 @@ reply_markup=keyboard
 
 @Client.on_message(command(["bilgi", f"bilgi@{BOT_USERNAME}"]))
 async def bilgi(_, message: Message):
-      await message.reply_text(f"**Salam {message.from_user.mention}!\n Bu botun məlumat menyusudur 🤓\n\n ▶️ /oynat - mahnı oxutmaq üçün youtube url və ya mahnı faylına cavab verin\n ▶️ /oynat <Mahnı adı> - istədiyiniz mahnını ifa edin\n 🔴 /ytp <Sorgu> - youtube-da oynat\n 🎵 /bul <Mahnı adı> - istədiyiniz mahnıları tez tapın\n 🎵 /vbul istədiyiniz videoları tez tapın\n 🔍 /ara <query> - youtube-da təfərrüatları olan videoları axtarın\n\n Yalnız idarəçilər üçün..\n ▶️ /devam - mahnını ifa etməyə davam edin\n ⏹ /bitir - musiqi çalmağı dayandırın\n 🔼 /ver istifadəçiyə icazə verin ki, bot yalnız administrator üçün mövcud olan əmrlərdən istifadə edə bilsin\n 🔽 /al botun admin əmrlərindən istifadə edə bilən istifadəçinin icazəsini ləğv edin\n 🎚 /ses köməkçi hesabınızın həcminə nəzarət edin\n\n ⚪ /katil - Musiqi köməkçisi qrupunuza qoşulur\n ⚫ /ayril - Musiqi köməkçisi qrupunuzu tərk edir.\n\n ❗ Not:\n Botun aktiv işləməsi üçün aşağıdakı üç imtiyaz tələb olunur:\n - Mesajları silmək səlahiyyəti,\n - Link vasitəsilə dəvət etmək səlahiyyəti,\n - Səsli çatı idarə etmək səlahiyyəti.**", 
+      await message.reply_text(f"**Salam {message.from_user.mention}!\n Bu botun məlumat menyusu 🤓\n\n ▶️ /oynat - şarkı çalmak için youtube url'sine veya şarkı dosyasına yanıt verme\n ▶️ /oynat <song name> - istediğiniz şarkıyı çal\n 🔴 /ytp <Sorgu> - youtube üzerinden çalma\n 🎵 /bul <song name> - istediğiniz şarkıları hızlı bir şekilde bulun\n 🎵 /vbul istediğiniz videoları hızlı bir şekilde bulun\n 🔍 /ara <query> - youtube'da ayrıntıları içeren videoları arama\n\n Yalnızca yöneticiler için..\n ▶️ /devam - şarkı çalmaya devam et\n ⏹ /bitir - müzik çalmayı durdurma\n 🔼 /ver botun sadece yönetici için kullanılabilir olan komutlarını kullanabilmesi için kullanıcıya yetki ver\n 🔽 /al botun yönetici komutlarını kullanabilen kullanıcının yetkisini al\n 🎚 /ses asistan hesabın ses seviyesini kontrol et\n\n ⚪ /katil - Müzik asistanı grubunuza katılır\n ⚫ /ayril - Müzik asistanı grubunuzu terk eder.\n\n ❗ Not:\n Botun aktif çalışması için şu üç yetkiye ihtiyaç vardır:\n - Mesaj silme yetkisi,\n - Bağlantı ile davet etme yetkisi,\n - Sesli sohbeti yönetme yetkisi.**", 
       reply_markup=InlineKeyboardMarkup(
              [
                  [
