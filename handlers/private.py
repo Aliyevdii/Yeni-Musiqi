@@ -7,8 +7,7 @@ from helpers.filters import command, other_filters2
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(client: Client, message: Message):
-    await message.reply_photo("https://telegra.ph/file/8db74f0e2236d1bb16251.jpg"),
-    await message.reply_text(f"**Salam {message.from_user.mention} 🎵\n Mən {bot}!\nTelegram qruplarında səsli söhbətdə musiqi səsləndirmək üçün yaradılmışam.\n✅ Ətraflı məlumat üçün /bilgi yazın.\nPowered by @NEXUS_MMC **",
+    await message.reply_text(f"**Salam {message.from_user.mention} 🎵\n Mən {bot}!\nTelegram qruplarında səsli söhbətdə musiqi səsləndirmək üçün yaradılmışam.\n✅ Ətraflı məlumat üçün /bilgi yazın\n\nPowered by @NEXUS_MMC **",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -31,7 +30,7 @@ async def start(client: Client, message: Message):
                 ],
                 [ 
                     InlineKeyboardButton(
-                        "🌀 Əmirlər" , url = "https://telegra.ph/Komutlar-10-22"
+                        "🌀 Əmirlər" , url = "https://t.me/NEXUS_MMC/9"
                     ),
                     InlineKeyboardButton(
                         "🌐 ⲛ ⲉ ⲭ υ ⲋ", url="https://t.me/NEXUS_MMC"
