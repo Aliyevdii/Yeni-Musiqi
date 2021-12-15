@@ -9,7 +9,7 @@ async def chat_member_updated(_, chat_member_updated: ChatMemberUpdated):
     chat = chat_member_updated.chat.id
     new = chat_member_updated.new_chat_member
 
-    if new.can_manage_voice_chats:
+    if chat_member_updated:
         if new.user.id not in cache.admins[chat]:
             cache.admins[chat].append(new.user.id)
     else:
