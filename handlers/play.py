@@ -286,7 +286,7 @@ async def oynat(_, message: Message):
         os.remove("final.png")
         return await lel.delete()
     else:
-        callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
+        position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
