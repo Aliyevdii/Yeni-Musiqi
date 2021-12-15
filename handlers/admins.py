@@ -26,7 +26,7 @@ async def durdur(_, message: Message):
         await message.reply_text("▶️ **Musiqi dayandırıldı!**\n\n• **musiqi istifadə etməyə davam etmək üçün » İrəli**") 
 
 
-@Client.on_message(command("irəli") & other_filters)
+@Client.on_message(command("dur") & other_filters)
 @errors
 @authorized_users_only
 async def devam(_, message: Message):
