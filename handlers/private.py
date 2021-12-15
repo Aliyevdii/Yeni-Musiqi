@@ -7,7 +7,7 @@ from helpers.filters import command, other_filters2
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(client: Client, message: Message):
-    await message.reply_photo("https://i.ibb.co/MpdcXYM/IMG-20211023-135851-221.jpg"),
+    await message.reply_photo("https://telegra.ph/file/8db74f0e2236d1bb16251.jpg"),
     await message.reply_text(f"**Salam {message.from_user.mention} 🎵\n Mən {bot}!\n Səsli çatlarda musiqi oxuya bilən botum.\n Qadağa (istifadəçilərə qadağa) səlahiyyəti olmadan Link ilə səsli söhbətləri idarə etməyə, mesajları silməyə və dəvət etməyə və qrupa Assistent göndərməyə imkan verir. .**",
     reply_markup=InlineKeyboardMarkup(
             [
