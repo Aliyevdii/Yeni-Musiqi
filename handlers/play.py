@@ -276,7 +276,7 @@ async def oynat(_, message: Message):
         file_path = await converter.convert(youtube.download(url))
   
     if message.chat.id in callsmusic.pytgcalls.active_calls:
-        position = await queues.put(message.chat.id, file=file_path)
+        callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
         photo="final.png",
         caption="**🎵 Musiqi:** {}\n**🕒 Vaxt:** {} min\n**👤 İfaçı:** {}\n\n** Növbəyə qoyulmuş mövqe:** {}".format(
@@ -286,7 +286,7 @@ async def oynat(_, message: Message):
         os.remove("final.png")
         return await lel.delete()
     else:
-        position = await queues.put(message.chat.id, file=file_path)
+        callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
