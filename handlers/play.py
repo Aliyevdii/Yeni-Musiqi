@@ -92,7 +92,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                    & ~filters.via_bot)
 async def oynat(_, message: Message):
 
-    lel = await message.reply("🔄 **Asistan Səsliyə qoşulur...**")
+    lel = await message.reply("⚡")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -153,7 +153,7 @@ async def oynat(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="Grup 🎧",
-                        url="https://t.me/iron_Blood_Gurup")
+                        url="https://t.me/Cat_House_Gurups")
                    
                 ]
             ]
