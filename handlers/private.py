@@ -7,17 +7,17 @@ from helpers.filters import command, other_filters2
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(client: Client, message: Message):
-    await message.reply_text(f"**Salam {message.from_user.mention} 🎵\n Mən {bot}!\nTelegram qruplarında səsli söhbətdə musiqi səsləndirmək üçün yaradılmışam.\n✅ Ətraflı məlumat üçün /bilgi yazın\n\nPowered by @NEXUS_MMC **",
+    await message.reply_text(f"**Salam {message.from_user.mention} 🎵\n Mən {bot}!\nTelegram qruplarında səsli söhbətdə musiqi səsləndirmək üçün yaradılmışam.\n✅ Ətraflı məlumat üçün /bilgi yazın\n\nPowered by @BLACK_MMC **",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Qurupa əlavə et", url="https://t.me/NexusMusiicbot?startgroup=true"
+                        "➕ Qurupa əlavə et", url="https://t.me/BSMussic_bot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💭 Söhbət Grubu", url="https://t.me/iron_Blood_Gurup"
+                        "💭 Söhbət Grubu", url="https://t.me/Cat_House_Gurups"
                     )
                 ],
                 [
@@ -25,15 +25,15 @@ async def start(client: Client, message: Message):
                         "👨🏻‍💻 Sahibi", url = "https://t.me/A_l_i_y_e_v_d_i"
                     ),
                     InlineKeyboardButton(
-                        "👨🏻‍🎤 Asistan" , url = "https://t.me/NexusAsistan"
+                        "👨🏻‍🎤 Asistan" , url = "https://t.me/BSMusicbotu"
                     )
                 ],
                 [ 
                     InlineKeyboardButton(
-                        "🌀 Əmirlər" , url = "https://t.me/NEXUS_MMC/9"
+                        "🌀 Əmirlər" , url = "https://t.me/BLACK_MMC/14"
                     ),
                     InlineKeyboardButton(
-                        "🌐 ⲛ ⲉ ⲭ υ ⲋ", url="https://t.me/NEXUS_MMC"
+                        "⚕️ Support", url="https://t.me/BLACK_MMC"
                     )
                 ]
             ]
